@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1_programacion_rad.Views.Pagecontactos">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+
+            <Entry x:Name="txtnombre" 
+                   Placeholder="Nombre y apellido:" 
+                   Keyboard="Text"
+                   TextColor="Green"
+                   Margin="10,10,10,0"/>
+
+            <Entry x:Name="txttelefono" 
+                   Placeholder="Nombre y apellido:" 
+                   Keyboard="Numeric"
+                   TextColor="Green"
+                   Margin="10,10,10,0"/>
+
+
+
+            <Entry x:Name="txtedad" 
+                   Placeholder="Edad:" 
+                   Keyboard="Numeric"
+                   TextColor="Green"
+                   Margin="10,10,10,0"/>
+
+
+            <Picker Title="Seleccione su pais"
+             TitleColor="Green" Margin="10,10,10,0" x:Name="cbpais" >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Honduras (504) </x:String>
+                        <x:String>Guatemala</x:String>
+                        <x:String>Nicaragua</x:String>
+                        <x:String>Panama</x:String>
+                        <x:String>Estados Unidos</x:String>
+                        <x:String>Mexico</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+
+            <Entry x:Name="txtnota" 
+                   Placeholder="Nota:"
+                   Keyboard="Text"
+                   Margin="10,10,10,0"/>
+            
+            
+
+            <Button x:Name="btnsalvar" 
+                    Text="Salvar Contacto" 
+                    Clicked="btnsalvar_Clicked" 
+                    Margin="10,10,10,0"
+                    BackgroundColor="Green"/>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

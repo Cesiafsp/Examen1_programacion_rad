@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1_programacion_rad.Views.PageInitialxaml">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar Contacto"
+                     Clicked="ToolbarItem_Clicked"/>
+
+
+
+
+        <ToolbarItem Text="Mapa"
+                     Clicked="ToolbarItem_Clicked"/> 
+
+    </ContentPage.ToolbarItems>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="white">
+                
+            </StackLayout>
+
+            <CollectionView x:Name="listcontactos"
+                            Margin="15"
+                            SelectionMode="Single"
+                            SelectionChanged="listcontactos_SelectionChanged">
+                
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" /> 
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding id}" />
+                            <Label Text="{Binding Nombre}" />
+                            <Label Text="{Binding Telefono}" />
+                            <Label Text="{Binding Edad}" />
+                            <Label Text="{Binding Nota}" />
+
+                            <Image Source="" WidthRequest="48" HeightRequest="48"/>
+
+                        </StackLayout>
+                        
+                    </DataTemplate>
+                    
+                </CollectionView.ItemTemplate>
+
+
+
+            </CollectionView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
